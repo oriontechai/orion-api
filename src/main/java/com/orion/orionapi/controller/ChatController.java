@@ -21,4 +21,10 @@ public class ChatController {
     public ResponseEntity<MessageDto> getCompletion(@RequestBody List<MessageDto> messages){
         return ResponseEntity.ok(chatService.getCompletion(messages));
     }
+
+    @CrossOrigin()
+    @GetMapping("/test")
+    public ResponseEntity<String> test(){
+        return ResponseEntity.ok("Hola este es un test");
+    }
 }
